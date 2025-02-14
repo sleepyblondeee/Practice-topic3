@@ -1,0 +1,73 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+    border: 2px solid blue;
+    border-radius: 10px;
+    background-color: #fff;
+    padding: 10px;
+    width: 300px;
+    transition: transform 0.3s ease;
+}
+
+ul:hover {
+    transform: scale(1.05);
+}
+
+ul li {
+    position: relative;
+    margin-bottom: 10px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+ul li:hover {
+    background-color: #e6f7ff;
+    transform: translateX(10px);
+}
+
+ul li ul {
+    margin-top: 10px;
+    padding-left: 20px;
+    border-left: 3px solid orange;
+}
+
+ul li ul li ul {
+    border-left: 2px solid lightblue;
+    margin-top: 10px;
+    padding-left: 20px;
+}
+
+ul li ul li ul li {
+    background-color: #f8f8f8;
+}
+
+ul li:hover > ul {
+    border-left-color: red;
+    padding-left: 30px;
+    transition: all 0.3s ease;
+}
+
+/* Стилі для активних та наведених елементів */
+li:hover {
+    background-color: #e0e0e0;
+}
+
+li:active {
+    background-color: #c0c0c0;
+    transform: scale(0.95);
+}
+
+/* Додаткові анімації для переходів */
+li ul {
+    transition: margin-left 0.3s ease, padding-left 0.3s ease;
+}
